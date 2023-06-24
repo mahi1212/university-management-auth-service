@@ -1,0 +1,2 @@
+Date: Sat,Jun,24,2023 | Time:9:36:17 | level error: failed to connect to database The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+Date: Sat,Jun,24,2023 | Time:9:56:25 | level error: failed to connect to database The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
