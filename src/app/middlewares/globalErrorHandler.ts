@@ -5,12 +5,12 @@ import handleValidationError from '../../errors/handleValidationError'
 import ApiError from '../../errors/ApiErrors'
 
 const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
-  res.status(500).json({
-    mongooseError: err,
-  })
+  //   res.status(500).json({
+  //     mongooseError: err,
+  //   })
 
   let statusCode = 500
-  let message = 'Something went wrong'
+  let message = 'Somethin   g went wrong'
   let errorMessages: IGenericErrorMessage[] = []
 
   if (err?.name === 'ValidationError') {
@@ -45,7 +45,7 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
     success: false,
     message,
     errorMessages,
-    stack: config.env == 'production' ? err?.stack : undefined,
+    stack: config.env == 'development' ? err?.stack : undefined,
   })
   next()
 }
