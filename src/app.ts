@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/api/v1/users/', userRoutes)
 
 // app.get('/', async (req: Request, res: Response, next: NextFunction) => {
-//   next('ore bap error')
+//   throw new ApiError(400, 'Bad Request')
 // });
 
 // global error handler

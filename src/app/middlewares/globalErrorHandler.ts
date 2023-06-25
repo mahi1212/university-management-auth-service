@@ -3,14 +3,19 @@ import { IGenericErrorMessage } from '../interfaces/error'
 import config from '../../config'
 import handleValidationError from '../../errors/handleValidationError'
 import ApiError from '../../errors/ApiErrors'
+// import { errorlogger } from '../../shared/logger'
 
 const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
+  //   wihtout handling validation error using mongoose
   //   res.status(500).json({
   //     mongooseError: err,
   //   })
 
+  // config?.env == 'development' ? console.log('🚀 GlobalErrorHandler ', err) :
+  //     errorlogger.error(err)
+
   let statusCode = 500
-  let message = 'Somethin   g went wrong'
+  let message = 'Something went wrong'
   let errorMessages: IGenericErrorMessage[] = []
 
   if (err?.name === 'ValidationError') {
