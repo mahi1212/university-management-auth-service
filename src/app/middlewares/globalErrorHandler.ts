@@ -1,10 +1,10 @@
-import { NextFunction, Request, Response } from "express"
+import { ErrorRequestHandler } from "express"
 import { IGenericErrorMessage } from "../interfaces/error";
 import config from "../../config";
 import handleValidationError from "../../errors/handleValidationError";
 import ApiError from "../../errors/ApiErrors";
 
-const globalErrorHandler = (err: any, req: Request, res: Response, next: NextFunction) => {
+const globalErrorHandler : ErrorRequestHandler = (err, req, res, next) => {
     res.status(500).json({
         mongooseError: err
     })

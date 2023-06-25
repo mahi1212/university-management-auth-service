@@ -1,7 +1,7 @@
 // const express = require('express')
 import express, { Application, NextFunction, Request, Response } from 'express'
 import cors from 'cors'
-import usersRoute from './app/modules/users/users.route'
+import { userRoutes } from './app/modules/users/user.route'
 import globalErrorHandler from './app/middlewares/globalErrorHandler'
 
 const app: Application = express()
@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // application routes
-app.use('/api/v1/users/', usersRoute)
+app.use('/api/v1/users/', userRoutes)
 
 
 
