@@ -1,45 +1,45 @@
 {
-    "keep": {
-        "days": true,
-        "amount": 14
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\.c4c372616d4ae413fe322a80b5bf53a634bf76bb-audit.json",
+  "files": [
+    {
+      "date": 1687518447115,
+      "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-23-06-17-error.log",
+      "hash": "60fe1da290f8fcc5f448967cd5f74d9357d389db678c9a17c74d0f35f5c88b6e"
     },
-    "auditLog": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\.c4c372616d4ae413fe322a80b5bf53a634bf76bb-audit.json",
-    "files": [
-        {
-            "date": 1687518447115,
-            "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-23-06-17-error.log",
-            "hash": "60fe1da290f8fcc5f448967cd5f74d9357d389db678c9a17c74d0f35f5c88b6e"
-        },
-        {
-            "date": 1687577777695,
-            "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-24-06-09-error.log",
-            "hash": "c6f930b7828841d8d0bc6fcf29067c8ac9ec9540bbc25c4e5de0a5db0271da3d"
-        },
-        {
-            "date": 1687579879772,
-            "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-24-06-10-error.log",
-            "hash": "834b3e20ff553fbbb9a968b4c1184d848152279474756648e35aa14455a66f9a"
-        },
-        {
-            "date": 1687582811741,
-            "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-24-06-11-error.log",
-            "hash": "32d4f5fcb33985a49adebcb33b459cc599b22acf46fa53d647107b3e89301531"
-        },
-        {
-            "date": 1687587456649,
-            "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-24-06-12-error.log",
-            "hash": "efe2fcc8835d396f569989f95eafe3b8d6a5540fab928b0001c37b22d36316c2"
-        },
-        {
-            "date": 1687667114435,
-            "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-25-06-10-error.log",
-            "hash": "f00907ba7b43cc6e25c979ac0aa3effa533d366c24364ca4ae68b76bceef53f8"
-        },
-        {
-            "date": 1687669329005,
-            "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-25-06-11-error.log",
-            "hash": "351e3c61cc807d9b134af6e233911648105d00d1cefecaad3230c4765e11e6f4"
-        }
-    ],
-    "hashType": "sha256"
+    {
+      "date": 1687577777695,
+      "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-24-06-09-error.log",
+      "hash": "c6f930b7828841d8d0bc6fcf29067c8ac9ec9540bbc25c4e5de0a5db0271da3d"
+    },
+    {
+      "date": 1687579879772,
+      "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-24-06-10-error.log",
+      "hash": "834b3e20ff553fbbb9a968b4c1184d848152279474756648e35aa14455a66f9a"
+    },
+    {
+      "date": 1687582811741,
+      "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-24-06-11-error.log",
+      "hash": "32d4f5fcb33985a49adebcb33b459cc599b22acf46fa53d647107b3e89301531"
+    },
+    {
+      "date": 1687587456649,
+      "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-24-06-12-error.log",
+      "hash": "efe2fcc8835d396f569989f95eafe3b8d6a5540fab928b0001c37b22d36316c2"
+    },
+    {
+      "date": 1687667114435,
+      "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-25-06-10-error.log",
+      "hash": "f00907ba7b43cc6e25c979ac0aa3effa533d366c24364ca4ae68b76bceef53f8"
+    },
+    {
+      "date": 1687669329005,
+      "name": "D:\\A_ProgrammingHero\\university-management-auth-service\\logs\\winston\\errors\\UMS-2023-25-06-11-error.log",
+      "hash": "351e3c61cc807d9b134af6e233911648105d00d1cefecaad3230c4765e11e6f4"
+    }
+  ],
+  "hashType": "sha256"
 }
