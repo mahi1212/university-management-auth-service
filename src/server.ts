@@ -4,9 +4,14 @@ import config from './config'
 import { logger, errorlogger } from './shared/logger'
 import { Server } from 'http'
 
-async function main() {
-  let server: Server
+process.on('uncaughtException', err => {
+  errorlogger.error(err)
+  process.exit(1)
+})
 
+let server: Server
+
+async function main() {
   try {
     await mongoose.connect(config.database_url as string)
     logger.info('Connected to database')
@@ -14,12 +19,12 @@ async function main() {
     server = app.listen(config.port, () => {
       logger.info(`Application is listening on port ${config.port}`)
     })
-  } catch (error) {
-    errorlogger.error('failed to connect to database', error)
+  } catch (err) {
+    errorlogger.error('failed to connect to database', err)
   }
 
   process.on('unhandledRejection', error => {
-    console.log('unhenadled rejection, we are shutting down')
+    // console.log('unhenadled rejection, we are shutting down')
     if (server) {
       server.close(() => {
         errorlogger.error(error)
@@ -32,3 +37,10 @@ async function main() {
 }
 
 main()
+
+process.on('SIGTERM', () => {
+  logger.info('SIGTERM RECEIVED, shutting down gracefully')
+  if (server) {
+    server.close()
+  }
+})
