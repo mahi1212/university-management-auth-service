@@ -8,7 +8,10 @@ import {
   AcademicSemesterMonths,
   AcademicSemesterTitles,
 } from './academicSemester.constant'
+import ApiError from '../../../errors/ApiErrors'
+import status from 'http-status'
 
+// create schema
 const academicSemesterSchema = new Schema<IAcademicSemester>(
   {
     title: {
@@ -41,6 +44,20 @@ const academicSemesterSchema = new Schema<IAcademicSemester>(
   }
 )
 
+// check if the semester already exist
+academicSemesterSchema.pre('save', async function (next) {
+  const isExist = await AcademicSemester.findOne({
+    title: this.title,
+    year: this.year
+  })
+
+  if (isExist) {
+    throw new ApiError(status.CONFLICT, 'Academic Semester already exist')
+  }
+  next()
+})
+
+// create model using schema
 export const AcademicSemester = model<IAcademicSemester, AcademicSemesterModel>(
   'AcademicSemester',
   academicSemesterSchema

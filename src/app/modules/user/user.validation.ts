@@ -6,9 +6,10 @@ import { z } from 'zod'
 
 const createUserZodSchema = z.object({
   body: z.object({
-    role: z.string({
-      required_error: 'role is required',
-    }),
+    // not working so commented out my role is not required
+    // role: z.string({
+    //   required_error: 'role is required',
+    // }),
     password: z.string().optional(),
   }),
 })

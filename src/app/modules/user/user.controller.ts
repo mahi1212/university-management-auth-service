@@ -1,20 +1,25 @@
-import { RequestHandler } from 'express'
+import { NextFunction, Request, RequestHandler, Response } from 'express'
 import { UserService } from './user.service'
+import sendResponse from '../../../shared/sendResponse'
+import httpStatus from 'http-status'
+// import { IAcademicSemester } from '../academicSemester/academicSemester.interface'
+import catchAsync from '../../../shared/catchAsync'
 // import { z } from 'zod'
 
-const createUserController: RequestHandler = async (req, res, next) => {
-  try {
-    const { user } = req.body
-    const result = await UserService.createUser(user)
-    res.status(200).json({
+const createUserController = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const { user } = req.body;
+    const result = await UserService.createUser(user);
+
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
       success: true,
-      message: 'User created successfully',
+      message: 'user created successfully!',
       data: result,
-    })
-  } catch (err) {
-    next(err)
+    });
+    next();
   }
-}
+)
 
 export const UserController = {
   createUserController,
